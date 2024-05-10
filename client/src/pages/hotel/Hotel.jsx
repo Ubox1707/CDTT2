@@ -101,10 +101,10 @@ const Hotel = () => {
             <span>{data.address}</span>
           </div>
           <span className="hotelDistance">
-            Excellent location – {data.distance}m from center
+            Vị trí tuyệt vời cách trung tâm – {data.distance}m
           </span>
           <span className="hotelPriceHighlight">
-            Book a stay over ${data.cheapestPrice} at this property and get a free airport taxi
+            Đặt ngay kì nghỉ với giá trên ${data.cheapestPrice} tại nơi lưu trú này và nhận taxi sân bay miễn phí
           </span>
           <div className="hotelImages">
             {data.photos?.map((photo, i) => (
@@ -126,12 +126,12 @@ const Hotel = () => {
               </p>
             </div>
             <div className="hotelDetailsPrice">
-              <h1>Perfect for a {days}-night stay!</h1>
+              <h1>Hoàn hảo cho kì nghỉ {days}</h1>
               <span>
-                Located in the real heart of Krakow, this property has an
-                excellent location score of 9.8!
+                
               </span>
-              <h2>
+              <h2>Tọa lạc ngay trung tâm thành phố Hà Nội, chỗ nghỉ này có
+                 điểm vị trí xuất sắc là 9,8!
                 <b>${days * data.cheapestPrice * options.room}</b> ({days} nights)
               </h2>
               <button onClick={handleClick}>Đặt phòng ngay hôm nay!</button>

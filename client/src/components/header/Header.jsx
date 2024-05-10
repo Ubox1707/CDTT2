@@ -131,7 +131,7 @@ const Header = ({ type }) => {
                 {openOptions && (
                   <div className="options">
                     <div className="optionItem">
-                      <span className="optionText">Adult</span>
+                      <span className="optionText">Người lớn</span>
                       <div className="optionCounter">
                         <button
                           disabled={options.adult <= 1}
@@ -152,7 +152,7 @@ const Header = ({ type }) => {
                       </div>
                     </div>
                     <div className="optionItem">
-                      <span className="optionText">Children</span>
+                      <span className="optionText">Trẻ em</span>
                       <div className="optionCounter">
                         <button
                           disabled={options.children <= 0}
@@ -173,7 +173,7 @@ const Header = ({ type }) => {
                       </div>
                     </div>
                     <div className="optionItem">
-                      <span className="optionText">Room</span>
+                      <span className="optionText">Phòng</span>
                       <div className="optionCounter">
                         <button
                           disabled={options.room <= 1}
