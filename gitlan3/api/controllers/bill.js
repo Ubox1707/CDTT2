@@ -6,7 +6,7 @@ import { createError } from "../utils/error.js";
 
 
 // Phương thức để khách hàng đặt phòng và tạo đơn hàng mới
-export const bookRoom = async (req, res, next) => {
+export const createBill = async (req, res, next) => {
   try {
     const { user, room, startDate, endDate } = req.body;
 
@@ -37,9 +37,9 @@ export const bookRoom = async (req, res, next) => {
 };
 
 // // Lấy lịch sử đặt phòng của khách hàng
-export const getBookingHistory = async (req, res) => {
+export const getListBill = async (req, res) => {
   try {
-    const customerId = req.params.userid;
+    const customerId = req.user._id;
     const bookingHistory = await Bill.find({ User: customerId });
     res.status(200).json(bookingHistory);
   } catch (error) {

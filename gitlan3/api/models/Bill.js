@@ -1,10 +1,6 @@
 import mongoose from "mongoose";
 const BillSchema = new mongoose.Schema(
   {
-    // idBill: {
-    //     type: Number,
-    //     required: true
-    //   },
       user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',

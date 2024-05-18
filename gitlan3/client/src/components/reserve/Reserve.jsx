@@ -19,15 +19,11 @@ const Reserve = ({ setOpen, hotelId }) => {
     const start = new Date(startDate);
     const end = new Date(endDate);
 
-    const date = new Date(start.getTime());
-
     const dates = [];
-
-    while (date <= end) {
-      dates.push(new Date(date).getTime());
-      date.setDate(date.getDate() + 1);
+    while (start <= end) {
+      dates.push(new Date(start));
+      start.setDate(start.getDate() + 1);
     }
-
     return dates;
   };
 
@@ -74,13 +70,11 @@ const Reserve = ({ setOpen, hotelId }) => {
       // Cập nhật thông tin sẵn có của các phòng đã chọn
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId}`, {
-            dates: alldates,
+          return axios.put(`/rooms/availability/${roomId}`, {
+            dates: alldates.map(date => date.getTime()), // Chuyển đổi sang Unix timestamp
           });
-          return res.data;
         })
       );
-  
       // Tạo hóa đơn mới
       await axios.post("/bills/create", {
         user: "user.pramas", 

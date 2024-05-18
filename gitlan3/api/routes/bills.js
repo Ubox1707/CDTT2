@@ -1,10 +1,12 @@
 import express from "express";
-import { bookRoom, getBookingHistory } from "../controllers/bill.js";
+import { createBill, getListBill } from "../controllers/bill.js";
 import { verifyToken } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
-router.post("/create", bookRoom);
+router.post("/create", createBill);
+
+router.get("/getListBill", getListBill);
 
 router.get("/bills", verifyToken, async (req, res) => {
   try {
