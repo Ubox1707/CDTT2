@@ -1,0 +1,301 @@
+.header{
+    z-index: 1;
+}
+
+
+.intro{
+    opacity: 0;
+    transform: translateY(20px); /* Dịch chuyển phần tử lên 20px */
+    transition: opacity 0.75s ease, transform 0.75s ease;
+    justify-content: center;
+    min-height: 60vh;
+    background-image: url("./img/hotelbanner.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+.intro.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.418);
+    z-index: -1;
+}
+.content{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    bottom: 100px;
+}
+.title{
+    font-family: Arial, sans-serif; 
+    text-align: center;
+    color:#6439ff;
+    font-weight: bold;
+    position: relative;
+}
+.underline {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 8px;
+  }
+  
+.underline::after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+    width: 200%; /* Độ dài của underline (có thể điều chỉnh) */
+    height: 4px; /* Độ dày của underline */
+    background-color: rgba(0, 0, 0, 0.418); /* Màu sắc của underline */
+    border-radius: 0px 4px 4px 0px;
+    
+}
+/*Service*/
+.service{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    min-height: 60vh;
+    margin-top: 4px;
+    background-image: url("./img/service.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.sColumn{
+    padding: 8px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.418);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    width: 450px;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.sContent{
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+.handwriting{
+    font-family: Arial, sans-serif;
+}
+
+/*-----*/
+/*member*/
+.member{
+    color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    background-image: url("./img/memberbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 40vh;
+    margin-top: 4px;
+    z-index: 0;
+    align-items: center;
+    text-align: center;
+}
+.mPic{
+    margin: 20px;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(212, 111, 135, 0.418);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    width: 450px;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+.mAvatar{
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 100px;
+    transition: all 0.5s ease;
+}
+.mAvatar:hover {
+    transform: scale(1.2); /* Kích thước phóng to */
+}
+.mName{
+    margin-top: 25px;
+}
+.mLink{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+}
+.mLink:hover{
+    color: #6439ff;
+}
+/*---*/
+/*feature*/
+.feature{
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url("./img/featurebg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 40vh;
+    margin-top: 4px;
+    z-index: 0;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.fColumn{
+    line-height: 50px;
+    margin: 20px;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(59, 89, 102, 0.418);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    width: 70%px;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+/*---*/
+/*Policy*/
+.policy{
+    color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("./img/policybg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 40vh;
+    margin-top: 4px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.pColumn{
+    margin: 20px;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(231, 128, 18, 0.418);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    width: 450px;
+    height: 350px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+/*---*/
+/*Contact*/
+.contact{
+    color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("./img/contactbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 40vh;
+    margin-top: 4px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.cColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 12px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(131, 98, 222, 0.418);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    width: 80%;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.cContent{
+    display: flex;
+    flex-direction: row;
+}
+.icon{
+    margin-right: 8px;
+}
+.link{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 30px;
+}
+.link:hover{
+    color: #6439ff;
+}
+/*---*/
+/*Outro*/
+.outtro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 30vh;
+    background-image: url("./img/outtrobg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+.overlayo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.418);
+    z-index: -1;
+}
+.oContent{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    bottom: 100px;
+}
+.footer{
+    align-items: center;
+    margin: 30px 0px 0px 100px;
+}
+
